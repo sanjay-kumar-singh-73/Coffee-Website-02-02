@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Comic Sans MS",sans-serif;
+}
+
+body{
+    background-color: #000;
+    position: relative;
+    color: #fff;
+}
+
+header{
+    background-color:black;
+    color: #fff;
+    padding:10px 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar a{
+    color: #fff;
+    font-size:17px;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+
+}
+
+.nav-menu{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-brand img{
+  width:75px;
+  filter: drop-shadow(0 0 10px red);
+}
+.nav-brand{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 12px;
+}
+
+.nav-link{
+    transition: .7s ease;
+}
+
+.nav-link:hover{
+    color:dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+}
+
+@media(max-width:769px){
+    .hamburger{
+        display: block;
+    }
+
+ 
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 80%;
+        text-align: center;
+        transition: 0.7s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+
+}
+
+
+/* ==========Hero Style Start======================= */
+
+.hero{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height:100vh;
+    padding-top:70px;
+}
+
+.hero-content{
+    margin-top: -50px;
+}
+
+.hero-content h2{
+    color: yellowgreen;
+}
+
+.hero-content h1{
+    font-size:40px;
+    font-weight: bold;
+}
+
+.hero-content p{
+    margin-top: 10px;
+    color: gray;
+}
+
+.hero-content .bttn{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-content .bttn .btn{
+    width: 140px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color:transparent;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 0 0 10px yellowgreen;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.hero-content .bttn .btn:hover{
+    scale: 1.1;
+    box-shadow: 0 22px 30px blue;
+    border: 1.3px solid white;
+}
+
+@media(max-width:1109px){
+    .hero{
+        display: block;
+        text-align: center;
+        margin-top:90px;
+    }
+
+    .bttn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        padding-top:500px;
+        padding-bottom:30px;
+    }
+
+
+    .hero{
+        padding-top:90px;
+    }
+
+    header{
+        top: 0;
+    }
+
+}
+
+@media(max-width:615px){
+    .hero-content h1{
+        font-size:27px;
+    }
+
+    .image img{
+        width:400px;
+    }
+
+    .bttn{
+        padding-top: 400px;
+        /* padding-bottom:5px; */
+    }
+}
+
+/* ==============About Style Start=============== */
+
+.about{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.about .image{
+    margin-bottom:80px;
+    margin-left: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .image img{
+    filter: drop-shadow(0 22px 30px yellowgreen);
+}
+
+.about .about-content{
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px yellowgreen; */
+    margin-right: 20px;
+}
+.about-content h2{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.about-content p{
+    color: gray;
+}
+
+.social-media{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 30px;
+    gap: 34px;
+}
+
+.social-media li{
+    width: 50px;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow:  0 22px 30px yellowgreen;
+    transition: .5s;
+}
+
+.social-media li:hover{
+    scale: 1.1;
+    box-shadow: 0 22px 30px blue;
+    border: 1.2px solid white;
+}
+
+.social-media li i{
+    font-size: 24px;
+}
+
+@media (max-width:1110px){
+    .about{
+        padding-top:140px;
+        display: block;
+    }
+}
